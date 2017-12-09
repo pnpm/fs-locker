@@ -1,0 +1,54 @@
+{
+  "name": "@pnpm/fs-locker",
+  "version": "0.0.0",
+  "description": "An fs locker for pnpm",
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "lint": "tslint -c tslint.json --project .",
+    "tsc": "rimraf lib && tsc",
+    "test": "npm run lint && preview && mos t",
+    "md": "mos",
+    "prepublishOnly": "npm run tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pnpm/fs-locker.git"
+  },
+  "keywords": [
+    "pnpm",
+    "server"
+  ],
+  "author": "Zoltan Kochan <z@kochan.io> (https://www.kochan.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnpm/fs-locker/issues"
+  },
+  "homepage": "https://github.com/pnpm/fs-locker#readme",
+  "devDependencies": {
+    "mos": "^2.0.0-alpha.3",
+    "mos-plugin-readme": "^1.0.4",
+    "package-preview": "^1.0.1",
+    "rimraf": "^2.6.2",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "mos": {
+    "plugins": [
+      "readme"
+    ],
+    "installation": {
+      "useShortAlias": true
+    }
+  },
+  "dependencies": {
+    "mkdirp-promise": "^5.0.1",
+    "proper-lockfile": "^2.0.1"
+  }
+}
