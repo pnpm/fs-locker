@@ -25,7 +25,7 @@ const locks = path.resolve('_locks')
 lock(process.cwd(), {stale: 100, locks})
   .then(unlock => {
     // do some stuff...
-    return unlock()
+    return unlock() // or unlock.sync()
   })
   .then(() => {
     console.log('folder unlocked')
@@ -34,6 +34,19 @@ lock(process.cwd(), {stale: 100, locks})
   .catch(err => console.error(err))
 ```
 <!--/@-->
+
+## API
+
+### `lock(filename, opts) => unlock[.sync]()`
+
+Locks the specified file. Returns an async and sync unlock function.
+
+#### Arguments
+
+- `filename` - the file to lock
+- `opts.stale` - duration in milliseconds in which the lock is considered stale
+- `opts.locks` - the folder that contains the lock files
+- `opts.whenLocked` - function that is called if a lock is found when trying to create the lock
 
 ## License
 
