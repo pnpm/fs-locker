@@ -35,6 +35,19 @@ lock(process.cwd(), {stale: 100, locks})
 ```
 <!--/@-->
 
+## API
+
+### `lock(filename, opts) => unlock[.sync]()`
+
+Locks the specified file. Returns an async and sync unlock function.
+
+#### Arguments
+
+* `filename` - the file to lock
+* `opts.stale` - duration in milliseconds in which the lock is considered stale
+* `opts.locks` - the folder that contains the lock files
+* `opts.whenLocked` - function that is called if a lock is found when trying to create the lock
+
 ## License
 
 [MIT](./LICENSE) © [Zoltan Kochan](https://www.kochan.io/)
