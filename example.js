@@ -7,7 +7,7 @@ const locks = path.resolve('_locks')
 lock(process.cwd(), {stale: 100, locks})
   .then(unlock => {
     // do some stuff...
-    return unlock()
+    return unlock() // or unlock.sync()
   })
   .then(() => {
     console.log('folder unlocked')
