@@ -1,5 +1,7 @@
 # @pnpm/fs-locker
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/pnpm/fs-locker.svg)](https://greenkeeper.io/)
+
 > An fs locker for pnpm
 
 <!--@shields('npm', 'travis')-->
