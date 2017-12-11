@@ -48,7 +48,7 @@
     }
   },
   "dependencies": {
-    "@types/node": "^8.0.57",
+    "@types/node": "^8.0.58",
     "mkdirp-promise": "^5.0.1",
     "proper-lockfile": "^2.0.1"
   }
