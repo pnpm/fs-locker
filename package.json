@@ -34,7 +34,7 @@
   "devDependencies": {
     "mos": "^2.0.0-alpha.3",
     "mos-plugin-readme": "^1.0.4",
-    "package-preview": "^1.0.1",
+    "package-preview": "^1.0.3",
     "rimraf": "^2.6.2",
     "tslint": "^5.8.0",
     "typescript": "^2.6.1"
