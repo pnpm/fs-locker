@@ -1,7 +1,7 @@
 dependencies:
   '@types/node': 10.5.4
   mkdirp-promise: 5.0.1
-  proper-lockfile: 2.0.1
+  proper-lockfile: 3.0.2
 devDependencies:
   mos: 2.0.0-alpha.3
   mos-plugin-readme: 1.0.4
@@ -2041,15 +2041,13 @@ packages:
     dev: true
     resolution:
       integrity: sha1-kRgvkckkhplXQPoF4NqUKsmGvvo=
-  /proper-lockfile/2.0.1:
+  /proper-lockfile/3.0.2:
     dependencies:
       graceful-fs: 4.1.11
       retry: 0.10.1
     dev: false
-    engines:
-      node: '>=4.0.0'
     resolution:
-      integrity: sha1-FZ+wYZPTIAP0s2kd0uwaY0qoDR0=
+      integrity: sha512-SDrSRyuKE1jM9b2kdpL6SA78wgG+M+fZKe2zbWkURsshOzUmoOornXQcasKQRP9hGhMoEILNpSbWcYoymoB5cA==
   /pseudomap/1.0.2:
     dev: true
     resolution:
@@ -2946,7 +2944,7 @@ specifiers:
   mos: ^2.0.0-alpha.3
   mos-plugin-readme: ^1.0.4
   package-preview: ^1.0.1
-  proper-lockfile: ^2.0.1
+  proper-lockfile: ^3.0.0
   rimraf: ^2.6.2
   tslint: ^5.8.0
   typescript: ^3.0.0
