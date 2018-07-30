@@ -37,7 +37,7 @@
     "package-preview": "^1.0.1",
     "rimraf": "^2.6.2",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1"
+    "typescript": "^3.0.0"
   },
   "mos": {
     "plugins": [
