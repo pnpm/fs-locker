@@ -14,7 +14,7 @@ async function lock (
     stale: number,
     whenLocked?: () => void,
   },
-): Promise<() => Promise<{}> & {sync: () => void}> {
+): Promise<(() => Promise<{}>) & {sync: () => void}> {
   const unlockThis = () => unlock(lockFilename)
   unlockThis['sync'] = () => lockfile.unlockSync(lockFilename, {realpath: false}) // tslint:disable-line
   const promise = new Promise((resolve, reject) => {
@@ -36,7 +36,7 @@ async function lock (
         }
       })
   })
-  return promise as Promise<() => Promise<{}> & {sync: () => void}>
+  return promise as Promise<(() => Promise<{}>) & {sync: () => void}>
 }
 
 async function unlock (lockFilename: string): Promise<{}> {
@@ -56,7 +56,7 @@ export default async function withLock<T> (
     locks: string,
     whenLocked?: () => void,
   },
-): Promise<() => Promise<{}> & {sync: () => void}> {
+): Promise<(() => Promise<{}>) & {sync: () => void}> {
   dir = path.resolve(dir)
   await mkdirp(opts.locks)
   const lockFilename = path.join(opts.locks, crypto.createHash('sha1').update(dir).digest('hex'))
