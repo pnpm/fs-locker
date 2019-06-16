@@ -9,7 +9,7 @@
 ## Installation
 
 ```sh
-npm i -S @pnpm/fs-locker
+<pnpm|yarn|npm> add @pnpm/fs-locker
 ```
 
 ## Usage

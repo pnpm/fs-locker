@@ -1,5 +1,5 @@
 import crypto = require('crypto')
-import mkdirp = require('mkdirp-promise')
+import makeDir = require('make-dir')
 import path = require('path')
 import lockfile = require('proper-lockfile')
 
@@ -12,7 +12,7 @@ export default async function withLock<T> (
   },
 ): Promise<(() => Promise<{}>) & { sync: () => void }> {
   dir = path.resolve(dir)
-  await mkdirp(opts.locks)
+  await makeDir(opts.locks)
   const lockFilename = path.join(opts.locks, crypto.createHash('sha1').update(dir).digest('hex'))
   return await lock(lockFilename, {
     firstTime: true,

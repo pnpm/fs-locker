@@ -8,14 +8,13 @@
     "lib"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=8.15"
   },
   "scripts": {
     "lint": "tslint -c tslint.json --project .",
     "tsc": "rimraf lib && tsc",
-    "test": "npm run lint && preview && mos t",
-    "md": "mos",
-    "prepublishOnly": "npm run tsc"
+    "test": "pnpm run lint && preview",
+    "prepublishOnly": "pnpm run tsc"
   },
   "repository": {
     "type": "git",
@@ -32,24 +31,14 @@
   },
   "homepage": "https://github.com/pnpm/fs-locker#readme",
   "devDependencies": {
-    "mos": "^2.0.0-alpha.3",
-    "mos-plugin-readme": "^1.0.4",
-    "package-preview": "^1.0.1",
+    "@types/node": "10",
+    "package-preview": "^2.0.0",
     "rimraf": "^2.6.2",
     "tslint": "^5.8.0",
     "typescript": "^3.0.0"
   },
-  "mos": {
-    "plugins": [
-      "readme"
-    ],
-    "installation": {
-      "useShortAlias": true
-    }
-  },
   "dependencies": {
-    "@types/node": "10",
-    "mkdirp-promise": "5.0.1",
-    "proper-lockfile": "3.2.0"
+    "make-dir": "^3.0.0",
+    "proper-lockfile": "3"
   }
 }
