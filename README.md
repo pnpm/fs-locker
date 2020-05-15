@@ -1,3 +1,5 @@
+**This package was used by pnpm v4 and older versions**
+
 # @pnpm/fs-locker
 
 > An fs locker for pnpm
